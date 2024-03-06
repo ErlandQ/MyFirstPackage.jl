@@ -1,7 +1,7 @@
 module MyFirstPackage
- using OMEinsum
+using OMEinsum
 
- export greet
+export greet
 
  """
  greet (name::String)
@@ -9,13 +9,12 @@ module MyFirstPackage
  Return a greeting message to input 'name'
  """
 
- function greet(name::String)
+function greet(name::String)
 
-    return "Greetings,$(name)!"
- end
- function private_sum(v::AbstractVector{<:Real})
-
+return "Greetings,$(name)!"
+end
+function private_sum(v::AbstractVector{<:Real})
     return ein"i->"(v)[]
     
- end
+end
 end
